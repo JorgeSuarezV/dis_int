@@ -1,9 +1,9 @@
 import React from 'react';
 import Navbar from "./components/Navbar";
-import {BottomSheet} from "./components/BottomSheet";
 import SearchBar from "./components/SearchBar";
-import IconButton from "./components/IconButton";
-
+import { RatingStarts } from './components/RatingStars';
+import { States } from './components/States';
+import BottomSheet from './components/BottomSheet';
 
 function App() {
     return (
@@ -15,13 +15,15 @@ function App() {
                     </div>
                     <div>
                         <BottomSheet>
+                            <RatingStarts />
+                            <States type={'PARO'}/>
                         </BottomSheet>
                         <Navbar/>
                     </div>
                 </div>
             </div>
         </div>
-    );
+  );
 }
 
 export default App;

@@ -1,5 +1,6 @@
-import React from 'react'
-import {ReactNode} from "react";
+import React, { ReactNode } from 'react'
+import { RatingStarts } from '../RatingStars';
+import { States } from '../States';
 
 interface BottomSheetProps {
     children?: ReactNode;

@@ -10,8 +10,6 @@ const StarSVG = ({ width = 24, height = 24, color = '#171717',}: IconProps) => {
                     fill={color}/>
             </g>
         </svg>
-
-    );
-};
-
+    )
+}
 export default StarSVG;

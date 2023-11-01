@@ -8,24 +8,13 @@ const buttonVariant = cva(['w-auto sm:w-fit', 'rounded-lg', "flex", "flex-row", 
             fulfilled: [
                 'bg-primary-500 text-white',
                 'hover:bg-primary-700 hover:text-white',
-                'disabled:bg-grey-300 disabled:text-grey-700',
+                'disabled:bg-greyScale-300 disabled:text-greyScale-700',
             ],
             outlined: [
                 'bg-white text-primary-500 border border-primary-500',
-                'hover:bg-primary-300',
-                'disabled:bg-grey-300 disabled:border-grey-300 disabled:text-grey-700',
+                'hover:bg-primary-100',
+                'disabled:bg-greyScale-300 disabled:border-greyScale-300 disabled:text-greyScale-700',
             ],
-            ghost: [
-                "bg-transparent text-primary-500",
-                "hover:bg-primary-300 hover:text-primary-500",
-                "disabled:bg-grey-100 disabled:text-grey-700"
-            ],
-            white: [
-                "bg-white text-primary-500",
-                "hover:bg-primary-300 hover:text-primary-500",
-                "disabled:bg-grey-100 disabled:text-grey-700"
-            ],
-            black: []
         },
         size: {
             small: ['px-4 py-2 text-xs'],

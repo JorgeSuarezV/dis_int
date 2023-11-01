@@ -1,8 +1,8 @@
-import React, {ButtonHTMLAttributes} from 'react';
+import React, {ButtonHTMLAttributes, ReactNode} from 'react';
 import {cva, VariantProps,} from "class-variance-authority";
 import Icon from "../Icon";
 
-const buttonVariant = cva(['w-full sm:w-fit', 'rounded-lg', "flex", "flex-row", "p-y-2.5", "p-x-3"], {
+const buttonVariant = cva(['w-auto sm:w-fit', 'rounded-lg', "flex", "flex-row", "p-y-2.5", "p-x-3", "gap-2"], {
     variants: {
         variant: {
             fulfilled: [
@@ -40,15 +40,19 @@ const buttonVariant = cva(['w-full sm:w-fit', 'rounded-lg', "flex", "flex-row", 
 })
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariant> {
-    iconLeft?: string;
-    iconRight?: string;
+    iconLeft?: ReactNode;
+    iconRight?: ReactNode;
 }
 
-const Button = ({variant, size, iconLeft, iconRight, ...rest}: ButtonProps) => {
+const Button = ({variant, size, iconLeft, iconRight, children, ...rest}: ButtonProps) => {
     return (
         <button className={buttonVariant({size, variant})} {...rest}>
             {iconLeft && <Icon width={20} height={20} image={iconLeft}/>}
+            {children}
             {iconRight && <Icon width={20} height={20} image={iconRight}/>}
         </button>
     )
 }
+
+
+export default Button

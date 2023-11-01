@@ -5,7 +5,6 @@ import { RatingStarts } from './components/RatingStars';
 import { States } from './components/States';
 import BottomSheet from './components/BottomSheet';
 
-
 function App() {
     return (
         <div className='flex w-full h-full justify-center content-center'>

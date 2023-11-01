@@ -7,7 +7,7 @@ function App() {
   return (
       <div className='flex w-full h-full justify-center content-center'>
         <div className='justify-center relative w-[412px] h-[892px] bg-white'>
-          <Navbar />
+          <BottomSheet/>
         </div>
       </div>
   );

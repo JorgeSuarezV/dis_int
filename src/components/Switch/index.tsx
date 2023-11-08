@@ -12,12 +12,12 @@ const variants = cva(['w-[36px] h-[36px] rounded-full flex items-center justify-
     }
 )
 
-interface DayPickerProps{
+interface SwitchProps{
     text: string;
     isEnabled: boolean;
 }    
 
-const DayPicker = ({ text, isEnabled }: DayPickerProps) => { 
+const Switch = ({ text, isEnabled }: SwitchProps) => { 
     const [enabled, setEnabled] = useState(isEnabled);
 
     return(
@@ -28,4 +28,4 @@ const DayPicker = ({ text, isEnabled }: DayPickerProps) => {
     )
 }
 
-export default DayPicker
+export default Switch

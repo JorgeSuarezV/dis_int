@@ -12,20 +12,20 @@ const variants = cva(['w-[36px] h-[36px] rounded-full flex items-center justify-
     }
 )
 
-interface DayPickerProps{
+interface BookmarkerProps{
     text: string;
-    isEnabled: boolean;
+    isBooked: boolean;
 }    
 
-const DayPicker = ({ text, isEnabled }: DayPickerProps) => { 
-    const [enabled, setEnabled] = useState(isEnabled);
+const Bookmarker = ({ text, isBooked }: BookmarkerProps) => { 
+    const [booked, setBooked] = useState(isBooked);
 
     return(
-        <div className={variants({variant: enabled ? 'enabled' : 'disabled'})} 
-            onClick={() => setEnabled(!enabled)}>
+        <div className={variants({variant: booked ? 'enabled' : 'disabled'})} 
+            onClick={() => setBooked(!booked)}>
             <p>{text}</p>
         </div>
     )
 }
 
-export default DayPicker
+export default Bookmarker

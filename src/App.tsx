@@ -7,6 +7,7 @@ import PhoneFrame from "./components/PhoneFrame/PhoneFrame";
 import TextInput from "./components/TextInput";
 import FromToInputs from "./components/FromToInputs";
 import DayPicker from './components/DayPicker';
+import Switch from './components/Switch';
 
 
 function App() {
@@ -21,7 +22,9 @@ function App() {
                     <div>
                         <BottomSheet>
                             <DayPicker text='L' isEnabled={false} />
+                            <Switch isEnabled={false} />
                         </BottomSheet>
+
                         <Navbar/>
                     </div>
                 </div>

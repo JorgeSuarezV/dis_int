@@ -8,6 +8,7 @@ import TextInput from "./components/TextInput";
 import FromToInputs from "./components/FromToInputs";
 import DayPicker from './components/DayPicker';
 import Switch from './components/Switch';
+import Bookmarker from './components/Bookmarker';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
                         <BottomSheet>
                             <DayPicker text='L' isEnabled={false} />
                             <Switch isEnabled={false} />
+                            <Bookmarker isBooked={false} />
                         </BottomSheet>
 
                         <Navbar/>

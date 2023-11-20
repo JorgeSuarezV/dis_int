@@ -10,7 +10,7 @@ const Bookmarker = ({ isBooked }: BookmarkerProps) => {
     const [booked, setBooked] = useState(isBooked);
 
     return(
-        <div className='cursor-pointer' onClick={() => setBooked(!booked)}>
+        <div className='w-min h-min cursor-pointer' onClick={() => setBooked(!booked)}>
             {booked ? <BookmarkerSVG /> : <OutlineBookmarkerSVG /> }
         </div>
     )

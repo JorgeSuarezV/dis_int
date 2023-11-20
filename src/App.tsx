@@ -9,6 +9,7 @@ import FromToInputs from "./components/FromToInputs";
 import DayPicker from './components/DayPicker';
 import Switch from './components/Switch';
 import Bookmarker from './components/Bookmarker';
+import RouteOptions from './components/RouteOptions';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                             <DayPicker text='L' isEnabled={false} />
                             <Switch isEnabled={false} />
                             <Bookmarker isBooked={false} />
+                            <RouteOptions isEnabled={false}/>
                         </BottomSheet>
 
                         <Navbar/>

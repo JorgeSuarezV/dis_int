@@ -14,6 +14,9 @@ module.exports = {
                     500:'#4063D6',
                     700:'#1D48D6',
                 },
+                active:{
+                    700:'#0094FF'
+                },
                 greyScale: {
                     100:'#F6F6F6',
                     150:'#F2F2F2',

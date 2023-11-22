@@ -39,6 +39,7 @@ module.exports = {
             },
             fontFamily: {
                 "Mandrope": ["Mandrope", "sans-serif"],
+                "Inter": ["Inter", "sans-serif"],
             },
             dropShadow: {
                 'custom': [

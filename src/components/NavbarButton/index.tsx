@@ -1,5 +1,5 @@
 import React, {ReactNode} from 'react'
-import { theme } from "../../../assets/theme";
+import { theme } from "../../assets/theme";
 
 interface NavbarButtonProps {
     icon: ReactNode;

@@ -9,7 +9,7 @@ const containerVariants = cva(["w-full h-43 px-4 py-3 bg-white rounded-3xl shado
     variants: {
         variant: {
             flat: ["shadow-none"],
-            default: ["shadow"],
+            default: ["shadow-custom"],
         }
     }
 });

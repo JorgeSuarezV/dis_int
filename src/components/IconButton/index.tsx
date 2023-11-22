@@ -21,7 +21,7 @@ const variants = cva(["flex justify-center items-center p-4 h-16 w-16 rounded-2x
 const IconButton = ({icon, disabled}: IconButtonProps) => {
     return (
         <div className={variants({variant: disabled ? 'disabled' : 'enabled'})}>
-            {icon ?? <PlusSVG color={'white'}/>}
+            {icon ?? <PlusSVG width={32} height={32} color={'white'}/>}
         </div>
     )
 };

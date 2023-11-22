@@ -4,7 +4,7 @@ import EditMode from "../../assets/icons/EditMode";
 import RouteSteps from "../RouteSteps";
 import NotificationBell from "../NotificationBell";
 import Switch from "../Switch";
-import ArrowUp from "../ArrowUp";
+import ArrowUp from "../../assets/icons/ArrowUp";
 import WeekPicker from "../WeekPicker";
 import Button from "../Button";
 import MiniMap from "../../assets/icons/MiniMap";

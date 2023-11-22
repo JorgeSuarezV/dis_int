@@ -11,6 +11,8 @@ import Switch from './components/Switch';
 import Bookmarker from './components/Bookmarker';
 import RouteOptions from './components/RouteOptions';
 import InfoTrip from './components/InfoTrip';
+import OptionTransport from './components/OptionTransport';
+import BusSVG from './assets/icons/BusSVG';
 
 
 function App() {
@@ -24,7 +26,8 @@ function App() {
                     </div>
                     <div>
                         <BottomSheet>
-                            <InfoTrip type={'duration'} text={'10'} />
+                            {/* <InfoTrip type={'duration'} text={'10'} /> */}
+                            <OptionTransport icon={<BusSVG />} text={'Colectivo'} />
                         </BottomSheet>
 
                         <Navbar/>

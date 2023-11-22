@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type {Meta, StoryObj} from '@storybook/react';
 
 import Icon from './index';
 import SearchSVG from "../../assets/icons/SearchSVG";
@@ -23,7 +23,7 @@ type Story = StoryObj<typeof Icon>;
 export const Search: Story = {
     render: (args) =>
         <div className={"bg-amber-500"}>
-            <Icon {...args} image={<SearchSVG/>} />
+            <Icon {...args} image={<SearchSVG/>}/>
         </div>
 };
 

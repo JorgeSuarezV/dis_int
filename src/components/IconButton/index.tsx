@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
+import React, {ReactNode} from "react";
 import PlusSVG from "../../assets/icons/PlusSVG";
-import { cva } from "class-variance-authority";
+import {cva} from "class-variance-authority";
 
-interface IconButtonProps{
+interface IconButtonProps {
     icon?: ReactNode;
     disabled?: boolean;
 }
@@ -10,7 +10,7 @@ interface IconButtonProps{
 const variants = cva(["flex justify-center items-center p-4 h-16 w-16 rounded-2xl "],
     {
         variants: {
-            variant:{
+            variant: {
                 enabled: ['bg-primary-500 cursor-pointer'],
                 disabled: ['bg-primary-200']
             }
@@ -18,10 +18,10 @@ const variants = cva(["flex justify-center items-center p-4 h-16 w-16 rounded-2x
     }
 );
 
-const IconButton = ({ icon, disabled }: IconButtonProps) => {
+const IconButton = ({icon, disabled}: IconButtonProps) => {
     return (
-        <div className={variants({ variant: disabled ? 'disabled':'enabled' })} >
-            { icon ?? <PlusSVG color={'white'}/> }
+        <div className={variants({variant: disabled ? 'disabled' : 'enabled'})}>
+            {icon ?? <PlusSVG color={'white'}/>}
         </div>
     )
 };

@@ -10,7 +10,7 @@ interface SearchResultProps {
 function SearchResult({text, description, IconLeft, IconRight}: SearchResultProps) {
     return (
         <div className={"w-full h-12 flex flex-row p-1 gap-2 items-center justify-start"}>
-            <IconLeft />
+            <IconLeft/>
             <div className={"flex flex-grow flex-col"}>
                 <p className={"font-Inter text-base font-normal"}>{text}</p>
                 <p className={"font-Inter text-base font-normal text-greyScale-600"}>{description}</p>

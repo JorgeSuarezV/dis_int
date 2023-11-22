@@ -7,6 +7,7 @@ export interface LineHeaderProps {
     title: string,
     state: TransportState
 }
+
 export default function LineHeader({title, state}: LineHeaderProps) {
     return (
         <div className={"flex w-380 justify-between items-center"}>

@@ -1,5 +1,4 @@
 import React from "react";
-import {TransportState, TransportStateIcon} from "../TransportStateIcon";
 import IconButton from "../IconButton";
 import {RatingStarts} from "../RatingStars";
 import Bookmarker from "../Bookmarker";
@@ -7,6 +6,7 @@ import Bookmarker from "../Bookmarker";
 export interface LocationHeaderProps {
     title: string,
 }
+
 export default function LocationHeader({title}: LocationHeaderProps) {
     return (
         <div className={"flex w-380 justify-between items-center"}>

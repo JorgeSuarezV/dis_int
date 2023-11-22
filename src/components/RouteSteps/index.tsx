@@ -14,7 +14,7 @@ export default function RouteSteps() {
                 <p className={"text-gray-800 font-Inter text-sm relative bottom-3 left-4"}>2</p>
             </div>
             <ArrowRight/>
-                <SmallBusSVG/>
+            <SmallBusSVG/>
             <div className={"flex p-1 px-2 py-1 items-center justify-center gap-2 rounded-md bg-red-600"}>
                 <p className={"overflow-hidden text-white text-ellipsis font-Inter text-sm font-normal leading-normal"}>30</p>
             </div>

@@ -1,4 +1,4 @@
-import React, {ComponentType, HTMLAttributes, InputHTMLAttributes} from 'react';
+import React, {ComponentType, InputHTMLAttributes} from 'react';
 import SearchSVG from "../../assets/icons/SearchSVG";
 import MicrophoneSVG from "../../assets/icons/MicrophoneSVG";
 import {theme} from "../../assets/theme";
@@ -14,7 +14,7 @@ const containerVariants = cva(["w-full h-43 px-4 py-3 bg-white rounded-3xl shado
     }
 });
 
-interface SearchBarProps extends InputHTMLAttributes<HTMLInputElement>{
+interface SearchBarProps extends InputHTMLAttributes<HTMLInputElement> {
     IconLeft?: ComponentType<{ color: string }>;
     IconRight?: ComponentType<{ color: string }>;
     variant?: "flat" | "default"
@@ -24,14 +24,15 @@ export default function SearchBar({IconLeft, IconRight, placeholder, variant, va
     return (
         <div
             className={containerVariants({variant: variant ?? "default"})}>
-            {IconLeft ? <IconLeft color={theme.gray700}/> : <SearchSVG color={theme.gray700}/> }
+            {IconLeft ? <IconLeft color={theme.gray700}/> : <SearchSVG color={theme.gray700}/>}
             <input
                 {...rest}
                 placeholder={placeholder}
                 type="text"
                 className="w-full h-19 text-neutral-500 text-base font-normal font-Inter outline-none"
             />
-            {IconRight ? <IconRight color={theme.gray700}/> : value ? <CloseSVG/> : <MicrophoneSVG color={theme.gray700}/>}
+            {IconRight ? <IconRight color={theme.gray700}/> : value ? <CloseSVG/> :
+                <MicrophoneSVG color={theme.gray700}/>}
         </div>
     );
 }

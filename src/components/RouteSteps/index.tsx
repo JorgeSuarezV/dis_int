@@ -11,7 +11,7 @@ export default function RouteSteps() {
                 <div className={"relative"}>
                     <WalkingSVG/>
                 </div>
-                <p className={"text-gray-800 font-inter text-sm relative bottom-3 left-4"}>2</p>
+                <p className={"text-gray-800 font-Inter text-sm relative bottom-3 left-4"}>2</p>
             </div>
             <ArrowRight/>
                 <SmallBusSVG/>
@@ -23,7 +23,7 @@ export default function RouteSteps() {
                 <div className={"relative"}>
                     <WalkingSVG/>
                 </div>
-                <p className={"text-gray-800 font-inter text-sm relative bottom-3 left-4"}>3</p>
+                <p className={"text-gray-800 font-Inter text-sm relative bottom-3 left-4"}>3</p>
             </div>
         </div>
     )

@@ -12,7 +12,7 @@ export default function LineHeader({title, state}: LineHeaderProps) {
         <div className={"flex w-380 justify-between items-center"}>
             <div className={"flex justify-start items-center"}>
                 <div>
-                    <p className={"overflow-hidden text-black overflow-ellipsis whitespace-no-wrap font-manrope text-2xl font-semibold"}>{title}</p>
+                    <p className={"overflow-hidden text-black overflow-ellipsis whitespace-no-wrap font-Manrope text-2xl font-semibold"}>{title}</p>
                     <RatingStarts/>
                 </div>
                 <TransportStateIcon state={state}/>

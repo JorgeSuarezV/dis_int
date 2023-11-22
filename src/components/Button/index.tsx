@@ -2,7 +2,7 @@ import React, {ButtonHTMLAttributes, ReactNode} from 'react';
 import {cva, VariantProps,} from "class-variance-authority";
 import Icon from "../Icon";
 
-const buttonVariant = cva(['flex','items-center', 'justify-center','w-auto sm:w-fit', 'rounded-lg', "flex", "flex-row", "p-y-2.5", "p-x-3", "gap-2"], {
+const buttonVariant = cva(['items-center', 'justify-center','w-auto sm:w-fit', 'rounded-[16px]', "flex", "flex-row", "p-y-2.5", "p-x-3", "gap-2"], {
     variants: {
         variant: {
             fulfilled: [
@@ -17,9 +17,9 @@ const buttonVariant = cva(['flex','items-center', 'justify-center','w-auto sm:w-
             ],
         },
         size: {
-            small: ['px-4 py-2 text-xs'],
-            medium: ['px-4 py-3 text-sm'],
-            large: ['px-4 py-3 text-base'],
+            small: ['px-3 py-2.5 text-xs'],
+            medium: ['px-3 py-2.5 text-sm'],
+            large: ['px-3 py-2.5 text-base'],
         }
     },
     defaultVariants: {

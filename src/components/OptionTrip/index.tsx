@@ -12,12 +12,12 @@ interface OptionTripProps{
 const OptionTrip = ({ arriveTime, duration, }: OptionTripProps) => {
 
     return(
-        <div className="flex justify-center items-center justify-between p-4">
-            <div className="flex items-center gap-2 flex-shrink-0">
-                <Button iconLeft={<NavigationSVG color={theme.white} />}> Iniciar </Button>
-                <Button iconLeft={<ScheduleSVG color={theme.primary500} />} variant={'outlined'}> Programar </Button>
+        <div className="w-[412px] h-[72px] px-4 py-[15px] bg-white shadow justify-between items-center inline-flex"> 
+            <div className="h-[42px] justify-start items-center gap-2 flex"> 
+                <Button size={'small'} iconLeft={<NavigationSVG width={20} height={20} color={theme.white} />}> Iniciar </Button>
+                <Button size={'medium'} iconLeft={<ScheduleSVG width={20} height={20} color={theme.primary500} />} variant={'outlined'}> Programar </Button>
             </div>
-            <div className="flex items-center gap-2 flex-shrink-0">
+            <div className="flex items-center gap-1 flex-shrink-0">
                 <p className="overflow-hidden text-gray-600 truncate whitespace-nowrap font-Inter text-base font-normal">
                     {arriveTime}
                 </p>

@@ -42,7 +42,7 @@ module.exports = {
                 }
             },
             fontFamily: {
-                "Mandrope": ["Mandrope", "sans-serif"],
+                "Manrope": ["Manrope", "sans-serif"],
                 "Inter": ["Inter", "sans-serif"],
             },
             dropShadow: {

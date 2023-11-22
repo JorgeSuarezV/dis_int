@@ -37,10 +37,10 @@ const InfoTrip = ({ type, text, }: InfoTripProps) => {
         <div className="flex items-center gap-1.5">
             {infoRecord[type].icon}
             <div className="flex flex-col items-start gap-1">
-                <p className="overflow-hidden text-gray-700 overflow-ellipsis whitespace-nowrap font-Inter text-base font-normal">
+                <p className="overflow-hidden text-greyScale-700 overflow-ellipsis whitespace-nowrap font-Inter text-base font-normal">
                     {infoRecord[type].amount}
                 </p>
-                <p className="overflow-hidden text-gray-700 overflow-ellipsis whitespace-nowrap font-Inter text-base font-normal">
+                <p className="overflow-hidden text-greyScale-700 overflow-ellipsis whitespace-nowrap font-Inter text-base font-normal">
                     {infoRecord[type].info}
                 </p>
             </div>

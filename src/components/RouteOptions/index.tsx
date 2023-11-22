@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { cva } from 'class-variance-authority';
-import DoneSVG from '../../assets/icons/AltRouteSVG copy';
+import DoneSVG from '../../assets/icons/DoneSVG';
 import { theme } from '../../assets/theme';
 
 const variants = cva(['overflow-hidden overflow-ellipsis whitespace-nowrap font-Manrope text-16 font-normal'],

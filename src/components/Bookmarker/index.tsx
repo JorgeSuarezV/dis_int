@@ -4,14 +4,16 @@ import OutlineBookmarkerSVG from '../../assets/icons/OutlineBookmarkerSVG';
 
 interface BookmarkerProps{
     isBooked: boolean;
+    width?: number;
+    height?: number;
 }    
 
-const Bookmarker = ({ isBooked }: BookmarkerProps) => { 
+const Bookmarker = ({ isBooked, ...rest }: BookmarkerProps) => {
     const [booked, setBooked] = useState(isBooked);
 
     return(
         <div className='w-min h-min cursor-pointer' onClick={() => setBooked(!booked)}>
-            {booked ? <BookmarkerSVG /> : <OutlineBookmarkerSVG /> }
+            {booked ? <BookmarkerSVG  {...rest}/> : <OutlineBookmarkerSVG {...rest} /> }
         </div>
     )
 }

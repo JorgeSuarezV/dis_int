@@ -1,26 +1,17 @@
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import Switch, {SwitchProps} from '.';
 
-export default {
-  title: 'Switch',
-  component: Switch,
-  argTypes: {
-    isEnabled: { control: 'boolean' },
-  },
-  parameters: {
-    layout: 'centered',
-    },
-  tags: ['autodocs']
-} as Meta;
-
-const Template: Story<SwitchProps> = (args) => <Switch {...args} />;
-
-export const Enabled = Template.bind({});
-Enabled.args = {
-  isEnabled: true,
+const meta: Meta<typeof Switch> = {
+   title: 'Switch',
+   component: Switch,
+   parameters: {
+      layout: 'centered',
+   },
+    tags: ['autodocs']
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  isEnabled: false,
+export default meta;
+
+export const Search: StoryObj<typeof Switch> = {
+   render: (args) => <Switch isEnabled={args.isEnabled ?? false} /> 
 };

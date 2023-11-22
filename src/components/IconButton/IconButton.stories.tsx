@@ -13,5 +13,5 @@ const meta: Meta<typeof IconButton> = {
 export default meta;
 
 export const Search: StoryObj<typeof IconButton> = {
-   render: (args) => <IconButton/>
+   render: (args) => <IconButton {...args} />
 };

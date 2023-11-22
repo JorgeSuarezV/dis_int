@@ -15,6 +15,6 @@ export default meta;
 export const Search: StoryObj<typeof LocationHeader> = {
    render: (args) => 
    <div className='w-[300px]'>
-        <LocationHeader{...args} title={'Titulo'}/>
+        <LocationHeader{...args} title={args.title ?? 'Titulo'}/>
    </div>
 };

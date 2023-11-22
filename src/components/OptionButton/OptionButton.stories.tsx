@@ -1,5 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import OptionButton from './index';
+import BookmarkerSVG from '../../assets/icons/BookmarkerSVG';
 
 const meta: Meta<typeof OptionButton> = {
    title: 'OptionButton',
@@ -13,5 +14,5 @@ const meta: Meta<typeof OptionButton> = {
 export default meta;
 
 export const Search: StoryObj<typeof OptionButton> = {
-   render: (args) => <OptionButton/>
+   render: (args) => <OptionButton{...args} text={args.text ?? 'Guardados'} icon={<BookmarkerSVG />} />
 };

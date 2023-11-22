@@ -13,23 +13,22 @@ const Navbar = () => {
             <NavbarButton
                 icon={<HomeSVG width={40} height={40} color={theme.gray600}/>}
                 width={40}
-                height={40}
-                color={theme.gray600}/>
+                height={40}/>
             <NavbarButton
                 icon={<CalendarSVG width={40} height={40} color={theme.gray600}/>}
                 width={40}
                 height={40}
-                color={theme.gray600}/>
+                />
             <NavbarButton
                 icon={<GroupsSVG width={40} height={40} color={theme.gray600}/>}
                 width={40}
                 height={40}
-                color={theme.gray600}/>
+                />
             <NavbarButton
                 icon={<SettingsSVG width={40} height={40} color={theme.gray600}/>}
                 width={40}
                 height={40}
-                color={theme.gray600}/>
+                />
         </div>
     )
 }

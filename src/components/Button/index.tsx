@@ -2,7 +2,7 @@ import React, {ButtonHTMLAttributes, ReactNode} from 'react';
 import {cva, VariantProps,} from "class-variance-authority";
 import Icon from "../Icon";
 
-const buttonVariant = cva(['items-center', 'justify-center', 'w-auto sm:w-fit', 'rounded-[16px]', "flex", "flex-row", "p-y-2.5", "p-x-3", "gap-2"], {
+const buttonVariant = cva(['items-center', 'px-3 py-2.5 text-sm', 'justify-center', 'w-auto sm:w-fit', 'rounded-[16px]', "flex", "flex-row", "p-y-2.5", "p-x-3", "gap-2"], {
     variants: {
         variant: {
             fulfilled: [
@@ -16,11 +16,6 @@ const buttonVariant = cva(['items-center', 'justify-center', 'w-auto sm:w-fit', 
                 'disabled:bg-greyScale-300 disabled:border-greyScale-300 disabled:text-greyScale-700',
             ],
         },
-        size: {
-            small: ['px-3 py-2.5 text-xs'],
-            medium: ['px-3 py-2.5 text-sm'],
-            large: ['px-3 py-2.5 text-base'],
-        },
         color: {
             primary: ["bg-primary-500"],
             red: ["bg-red-500 hover:bg-red-700"],
@@ -28,7 +23,6 @@ const buttonVariant = cva(['items-center', 'justify-center', 'w-auto sm:w-fit', 
     },
     defaultVariants: {
         variant: 'fulfilled',
-        size: 'medium',
         color: 'primary'
     }
 })
@@ -39,9 +33,9 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, Va
     color?: "primary" | "red"
 }
 
-const Button = ({variant, size, iconLeft, iconRight, children, color, ...rest}: ButtonProps) => {
+const Button = ({variant, iconLeft, iconRight, children, color, ...rest}: ButtonProps) => {
     return (
-        <button className={buttonVariant({size, variant, color})} {...rest}>
+        <button className={buttonVariant({variant, color})} {...rest}>
             {iconLeft && <Icon width={20} height={20} image={iconLeft}/>}
             {children}
             {iconRight && <Icon width={20} height={20} image={iconRight}/>}

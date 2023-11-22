@@ -14,12 +14,7 @@ export default meta;
 
 export const Search: StoryObj<typeof LineHeader> = {
    render: (args) => 
-   <div className='w-[300px]'>
-        <LineHeader{...args} state={'detour'} title={'Titulo'}/>
-        <LineHeader{...args} state={'delayed'} title={'Titulo'}/>
-        <LineHeader{...args} state={'strike'} title={'Titulo'}/>
-        <LineHeader{...args} state={'ok'} title={'Titulo'}/>
-        <LineHeader{...args} state={'transshipment'} title={'Titulo'}/>
-        <LineHeader{...args} state={'offline'} title={'Titulo'}/>
+   <div className='flex flex-col gap-4 w-[300px]'>
+        <LineHeader{...args} state={args.state ?? 'detour'} title={args.title ?? 'Titulo'}/>
    </div>
 };

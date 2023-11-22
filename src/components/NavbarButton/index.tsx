@@ -4,12 +4,11 @@ interface NavbarButtonProps {
     icon: ReactNode;
     width: number;
     height: number;
-    color: string;
 }
 
-export const NavbarButton = ({icon, width, height, color}: NavbarButtonProps) => {
+export const NavbarButton = ({icon, width, height}: NavbarButtonProps) => {
     return (
-        <div className={` cursor-pointer p-3 rounded-full hover:bg-gray-100`}>
+        <div className={` w-[${width}px] h-[${height}px] cursor-pointer p-3 rounded-full hover:bg-gray-100`}>
             {icon}
         </div>
     )

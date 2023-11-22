@@ -12,7 +12,7 @@ const variants = cva(['w-[55px] h-[30px] rounded-full flex items-center cursor-p
     }
 );
 
-interface SwitchProps {
+export interface SwitchProps {
     isEnabled: boolean;
 }
 

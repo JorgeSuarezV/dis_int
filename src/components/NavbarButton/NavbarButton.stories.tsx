@@ -1,7 +1,9 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import {NavbarButton} from './index';
-// @ts-ignore
-import {HomeSVG, CalendarSVG, GroupsSVG, SettingsSVG} from '../../assets/icons';
+import HomeSVG from '../../assets/icons/HomeSVG';
+import CalendarSVG from '../../assets/icons/CalendarSVG';
+import GroupsSVG from '../../assets/icons/GroupsSVG';
+import SettingsSVG from '../../assets/icons/SettingsSVG';
 
 const meta: Meta<typeof NavbarButton> = {
    title: 'NavbarButton',
@@ -19,24 +21,6 @@ export const Search: StoryObj<typeof NavbarButton> = {
    <div className='w-[300px] h-[100px]'>
         <NavbarButton {...args}
             icon={<HomeSVG width={40} height={40} color={'theme.gray600'}/>}
-            width={40}
-            height={40}
-            color={'theme.gray600'}/>
-        <NavbarButton {...args}
-            icon={<CalendarSVG width={40} height={40} color={'theme.gray600'}/>}
-            width={40}
-            height={40}
-            color={'theme.gray600'}/>
-        <NavbarButton {...args}
-            icon={<GroupsSVG width={40} height={40} color={'theme.gray600'}/>}
-            width={40}
-            height={40}
-            color={'theme.gray600'}/>
-        <NavbarButton {...args}
-            icon={<SettingsSVG width={40} height={40} color={'theme.gray600'}/>}
-            width={40}
-            height={40}
-            color={'theme.gray600'}/>
-
+        />
    </div>
 };

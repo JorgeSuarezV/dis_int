@@ -15,8 +15,6 @@ export default meta;
 export const Search: StoryObj<typeof InfoTrip> = {
    render: (args) => 
    <div>
-        <InfoTrip{...args} type={'duration'} text={'5'}/>
-        <InfoTrip{...args} type={'distance'} text={'5'}/>
-        <InfoTrip{...args} type={'costs'} text={'1000'}/>
+        <InfoTrip{...args} type={args.type ?? 'duration'} text={args.text ?? '5'}/>
    </div>
 };

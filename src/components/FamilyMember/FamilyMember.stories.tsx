@@ -15,6 +15,6 @@ export default meta;
 export const Search: StoryObj<typeof FamilyMember> = {
    render: (args) => 
    <div className='w-[300px]'>
-        <FamilyMember/>
+        <FamilyMember{...args} name={args.name ?? 'Ines'}  type={args.type ?? 'Hija'} />
    </div>
 };

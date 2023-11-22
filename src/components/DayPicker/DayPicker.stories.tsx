@@ -14,7 +14,7 @@ export default meta;
 
 export const Search: StoryObj<typeof DayPicker> = {
    render: (args) =>  
-   <div className=''>
+   <div className='flex flex-col gap-4'>
         <DayPicker{...args} text={'L'} isEnabled={true}/>
         <DayPicker{...args} text={'L'} isEnabled={false}/>
    </div>

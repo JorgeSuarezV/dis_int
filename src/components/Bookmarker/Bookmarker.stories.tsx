@@ -14,7 +14,7 @@ export default meta;
 
 export const Search: StoryObj<typeof Bookmarker> = {
    render: (args) => 
-   <div className=''>
+   <div className='flex flex-col gap-4'>
         <Bookmarker{...args} isBooked={true}/>
         <Bookmarker{...args}/>
    </div>

@@ -5,8 +5,6 @@ import {theme} from "../../assets/theme";
 import {cva} from "class-variance-authority";
 import CloseSVG from "../../assets/icons/CloseSVG";
 
-
-
 const containerVariants = cva(["w-full h-43 px-4 py-3 bg-white rounded-3xl shadow border border-neutral-300 flex justify-start items-center gap-2"], {
     variants: {
         variant: {

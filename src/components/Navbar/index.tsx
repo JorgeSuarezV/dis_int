@@ -4,7 +4,7 @@ import CalendarSVG from "../../assets/icons/CalendarSVG";
 import GroupsSVG from "../../assets/icons/GroupsSVG";
 import SettingsSVG from "../../assets/icons/SettingsSVG";
 import {theme} from "../../assets/theme";
-import {NavbarButton} from "./components/NavbarButton";
+import { NavbarButton } from "../NavbarButton";
 
 const Navbar = () => {
     return(

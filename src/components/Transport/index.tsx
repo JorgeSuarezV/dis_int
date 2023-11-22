@@ -15,8 +15,8 @@ function Transport({transport, title, description, state}: TransportProps) {
             <div className={"flex items-center gap-4"}>
                 <TransportMediumIcon transport={transport}/>
                 <div className={"flex flex-col justify-start items-start w-auto"}>
-                    <p className={"overflow-hidden text-black text-ellipsis whitespace-nowrap font-inter text-base font-normal"}>{title}</p>
-                    <p className={"overflow-hidden text-black text-ellipsis whitespace-nowrap font-inter text-base font-normal color-greyScale600"}>{description}</p>
+                    <p className={"overflow-hidden text-black text-ellipsis whitespace-nowrap font-Inter text-base font-normal"}>{title}</p>
+                    <p className={"overflow-hidden text-black text-ellipsis whitespace-nowrap font-Inter text-base font-normal color-greyScale600"}>{description}</p>
                 </div>
             </div>
             <TransportStateIcon state={state}/>

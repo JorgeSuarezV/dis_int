@@ -10,6 +10,7 @@ import DayPicker from './components/DayPicker';
 import Switch from './components/Switch';
 import Bookmarker from './components/Bookmarker';
 import RouteOptions from './components/RouteOptions';
+import InfoTrip from './components/InfoTrip';
 
 
 function App() {
@@ -23,10 +24,7 @@ function App() {
                     </div>
                     <div>
                         <BottomSheet>
-                            <DayPicker text='L' isEnabled={false} />
-                            <Switch isEnabled={false} />
-                            <Bookmarker isBooked={false} />
-                            <RouteOptions isEnabled={false}/>
+                            <InfoTrip type={'duration'} text={'10'} />
                         </BottomSheet>
 
                         <Navbar/>

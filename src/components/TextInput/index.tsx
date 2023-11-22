@@ -15,7 +15,7 @@ const inputVariants = cva(["flex rounded-xl p-3 items-start w-full border border
     }
 })
 
-const labelVariants = cva(["font-inter text-sm font-normal"], {
+const labelVariants = cva(["font-Inter text-sm font-normal"], {
     variants: {
         variant: {
             disabled: ["text-greyScale-300"],
@@ -28,7 +28,7 @@ const labelVariants = cva(["font-inter text-sm font-normal"], {
     }
 })
 
-const helperTextVariants = cva(["font-inter text-xs font-normal"], {
+const helperTextVariants = cva(["font-Inter text-xs font-normal"], {
     variants: {
         variant: {
             disabled: ["text-greyScale-300"],
@@ -55,7 +55,7 @@ function TextInput({inputState, label, isMandatory, helperText, ...rest}: TextIn
         <div className={"flex flex-col items-start gap-2 w-full"}>
             <div className={"flex gap-1"}>
                 <label className={labelVariants({variant: inputState})}>{label}</label>
-                {!!isMandatory && <span className={"text-error-red font-inter text-sm font-normal"}>{" *"}</span>}
+                {!!isMandatory && <span className={"text-error-red font-Inter text-sm font-normal"}>{" *"}</span>}
             </div>
             <input disabled={inputState === "disabled"} className={inputVariants({variant: inputState})} {...rest}/>
             {!!helperText && <p className={helperTextVariants({variant: inputState})}>{helperText}</p>}

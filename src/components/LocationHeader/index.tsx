@@ -16,8 +16,8 @@ export default function LocationHeader({title}: LocationHeaderProps) {
                     <RatingStarts/>
                 </div>
             </div>
-            <div className={"flex g-8"}>
-                <Bookmarker isBooked={false}/>
+            <div className={"flex gap-8 items-center"}>
+                <Bookmarker width={32} height={32} isBooked={false}/>
                 <IconButton/>
             </div>
         </div>

@@ -11,4 +11,4 @@ export default {
   tags: ['autodocs']
 } as Meta;
 
-export const Template: Story<ButtonProps> = (args) => <Button {...args}   variant='fulfilled' children='Fulfilled' iconLeft={<StarSVG />} iconRight={<StarSVG />} />;
+export const Template: Story<ButtonProps> = (args) => <Button {...args}   variant={args.variant ?? 'fulfilled'} children={args.children ?? 'Fulfilled'} iconLeft={<StarSVG />} iconRight={<StarSVG />} />;

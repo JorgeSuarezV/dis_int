@@ -6,7 +6,7 @@ const buttonVariant = cva(['items-center', 'justify-center','w-auto sm:w-fit', '
     variants: {
         variant: {
             fulfilled: [
-                'bg-primary-500 text-white',
+                'text-white',
                 'hover:bg-primary-700 hover:text-white',
                 'disabled:bg-greyScale-300 disabled:text-greyScale-700',
             ],
@@ -20,22 +20,28 @@ const buttonVariant = cva(['items-center', 'justify-center','w-auto sm:w-fit', '
             small: ['px-3 py-2.5 text-xs'],
             medium: ['px-3 py-2.5 text-sm'],
             large: ['px-3 py-2.5 text-base'],
+        },
+        color: {
+            primary: ["bg-primary-500"],
+            red: ["bg-red-500 hover:bg-red-700"],
         }
     },
     defaultVariants: {
         variant: 'fulfilled',
-        size: 'medium'
+        size: 'medium',
+        color: 'primary'
     }
 })
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariant> {
     iconLeft?: ReactNode;
     iconRight?: ReactNode;
+    color?: "primary" | "red"
 }
 
-const Button = ({variant, size, iconLeft, iconRight, children, ...rest}: ButtonProps) => {
+const Button = ({variant, size, iconLeft, iconRight, children, color, ...rest}: ButtonProps) => {
     return (
-        <button className={buttonVariant({size, variant})} {...rest}>
+        <button className={buttonVariant({size, variant, color})} {...rest}>
             {iconLeft && <Icon width={20} height={20} image={iconLeft}/>}
             {children}
             {iconRight && <Icon width={20} height={20} image={iconRight}/>}

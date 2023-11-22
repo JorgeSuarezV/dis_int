@@ -1,5 +1,5 @@
 import React from "react";
-import Bookmarker from "./Bookmarker";
+import Bookmarker from "../Bookmarker";
 
 
 export default function OptionButton() {

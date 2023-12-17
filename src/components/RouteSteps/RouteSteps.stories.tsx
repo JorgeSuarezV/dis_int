@@ -13,5 +13,11 @@ const meta: Meta<typeof RouteSteps> = {
 export default meta;
 
 export const Search: StoryObj<typeof RouteSteps> = {
-    render: (args) => <RouteSteps/>
+    render: (args) => <RouteSteps steps={[
+        {type: "walking", number: 2},
+        {type: "bus", number: 3},
+        {type: "subway", number: 4},
+        {type: "train", number: 5},
+        {type: "walking", number: 6},
+    ]}/>
 };

@@ -29,7 +29,7 @@ export default function ScheduleTrip() {
             {isOpened &&
                 <>
                     <div className={"flex justify-between items-center px-5"}>
-                        <RouteSteps/>
+                        <RouteSteps steps={[{type: "walking", number: 2}, {type: "bus", number:32}, {type: "walking", number:3}]}/>
                         <div className={"flex gap-2 items-center"}>
                             <NotificationBell/>
                             <Switch isEnabled={true}/>

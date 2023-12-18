@@ -1,10 +1,6 @@
 // Transport.stories.tsx
 import * as React from "react";
-import { Meta, Story } from "@storybook/react";
 import Transport from "../Transport";
-import {TransportProps} from "../TransportMediumIcon";
-import {TransportMedium} from "../TransportMediumIcon";
-import {TransportState} from "../TransportStateIcon";
 
 
 export default {
@@ -13,7 +9,7 @@ export default {
 }
 
 const Template = (args) =>
-    <div className={"w-[300px] bg-black h-[150px] flex justify-center items-center"}>
+    <div className={"w-[320px] bg-black h-[150px] flex justify-center items-center"}>
         <Transport {...args} />;
     </div>
 

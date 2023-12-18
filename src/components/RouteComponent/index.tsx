@@ -6,7 +6,7 @@ export default function RouteComponent() {
     return (
         <div className={"flex w-full justify-between items-center"}>
             <div className={"flex-col justify-start items-start"}>
-                <RouteSteps/>
+                <RouteSteps steps={[{type: "walking", number: 2}, {type: "bus", number:32}, {type: "walking", number:3}]}/>
                 <p>12:05 - 12:31</p>
             </div>
             <div className={"flex-col justify-start items-start"}>

@@ -9,6 +9,7 @@ import {ScrollableImages} from "./components/ScrollableImages";
 import FromToInputs from "./components/FromToInputs";
 import RouteSteps from "./components/RouteSteps";
 import Divider from "./components/Divider";
+import OptionTrip from "./components/OptionTrip";
 import StartFinishStep from "./components/StartFinishStep";
 
 
@@ -16,6 +17,7 @@ function App() {
     const [searchValue, setSearchValue] = React.useState("")
     const [screen, setScreen] = React.useState(0)
     const [isOpen, setIsOpen] = React.useState(false)
+
 
     return (
         <PhoneFrame screen={screen} setScreen={setScreen}>
@@ -40,32 +42,40 @@ function App() {
                                 </div>
                             </div>
                         </BottomSheet>
-                        <Navbar/>
+                        <div className={"absolute bottom-0"}>
+                            <Navbar/>
+                        </div>
                     </div>
                 </div>
             </div>
             }
             {screen === 1 &&
-                <div className={"w-full h-full flex flex-col gap-4 justify-start bg-white"}>
-                    <div>
-                        <FromToInputs/>
-                    </div>
-                    <div className={"w-full px-[26px]"}>
-                        <RouteSteps steps={[
-                            {type: "walking", number: 2},
-                            {type: "bus", number: 32},
-                            {type: "walking", number: 3},
-                        ]}/>
-                    </div>
-                    <div className={"w-full px-[16px]"}>
-                        <Divider/>
-                    </div>
+                <div className="w-full h-full flex flex-col justify-end bg-white">
+                    <div className={"w-full h-full flex flex-col gap-4 justify-start "}>
+                        <div>
+                            <FromToInputs/>
+                        </div>
 
-                    {/*<StartFinishStep*/}
-                    {/*    description={"4th Avenue Sargent, Birmingham"}*/}
-                    {/*    title={"Starbucks Coffee"}*/}
-                    {/*    time={"12:31"}*/}
-                    {/*/>*/}
+                        <div className={"w-full px-[26px]"}>
+                            <RouteSteps steps={[
+                                {type: "walking", number: 2},
+                                {type: "bus", number: 32},
+                                {type: "walking", number: 3},
+                            ]}/>
+                        </div>
+                        <div className={"w-full px-[16px]"}>
+                            <Divider/>
+                        </div>
+
+                        <div className={"flex flex-col flex-grow"}>
+
+                        </div>
+                        <StartFinishStep title={"s"}  time={"s"}/>
+                    </div>
+                    <div>
+                        <OptionTrip arriveTime={"12:13"} duration={"26 min"}/>
+                        <Navbar/>
+                    </div>
                 </div>
             }
         </PhoneFrame>

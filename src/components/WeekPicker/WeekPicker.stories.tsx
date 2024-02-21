@@ -12,7 +12,7 @@ const meta: Meta<typeof WeekPicker> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof WeekPicker> = {
+export const Docs: StoryObj<typeof WeekPicker> = {
     render: (args) =>
     <div className='w-[300px]'>
         <WeekPicker/>

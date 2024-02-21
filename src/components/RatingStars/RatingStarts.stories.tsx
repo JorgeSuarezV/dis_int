@@ -12,6 +12,6 @@ const meta: Meta<typeof RatingStarts> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof RatingStarts> = {
+export const Docs: StoryObj<typeof RatingStarts> = {
    render: (args) => <RatingStarts/>
 };

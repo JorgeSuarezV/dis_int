@@ -1,3 +1,5 @@
+// @ts-ignore
+import avatar from "../../assets/images/avatar.png";
 import type {Meta, StoryObj} from '@storybook/react';
 import FamilyMember from './index';
 
@@ -12,9 +14,9 @@ const meta: Meta<typeof FamilyMember> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof FamilyMember> = {
+export const Docs: StoryObj<typeof FamilyMember> = {
    render: (args) => 
    <div className='w-[300px]'>
-        <FamilyMember{...args} name={args.name ?? 'Ines'}  type={args.type ?? 'Hija'} />
+        <FamilyMember{...args} name={args.name ?? 'Name'}  type={args.type ?? 'Type'} icon={args.icon ?? <img src={avatar} alt={""}/>}/>
    </div>
 };

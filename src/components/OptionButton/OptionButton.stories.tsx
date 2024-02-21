@@ -13,6 +13,6 @@ const meta: Meta<typeof OptionButton> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof OptionButton> = {
-   render: (args) => <OptionButton{...args} text={args.text ?? 'Guardados'} icon={<BookmarkerSVG />} />
+export const Docs: StoryObj<typeof OptionButton> = {
+   render: (args) => <OptionButton{...args} text={args.text ?? 'Text'} icon={<BookmarkerSVG />} />
 };

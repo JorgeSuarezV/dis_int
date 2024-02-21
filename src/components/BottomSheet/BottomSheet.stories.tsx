@@ -12,6 +12,6 @@ const meta: Meta<typeof BottomSheet> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof BottomSheet> = {
+export const Docs: StoryObj<typeof BottomSheet> = {
    render: (args) => <BottomSheet /> 
 };

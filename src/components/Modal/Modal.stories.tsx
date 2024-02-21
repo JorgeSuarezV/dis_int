@@ -12,6 +12,6 @@ const meta: Meta<typeof Modal> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof Modal> = {
-   render: (args) => <Modal title={args.title ?? 'Titulo'} body={args.body ?? 'Description'}  /> 
+export const Docs: StoryObj<typeof Modal> = {
+   render: (args) => <Modal title={args.title ?? 'Title'} body={args.body ?? 'Body'}  /> 
 };

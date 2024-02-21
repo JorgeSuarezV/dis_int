@@ -12,6 +12,6 @@ const meta: Meta<typeof ScrollableImages> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof ScrollableImages> = {
+export const Docs: StoryObj<typeof ScrollableImages> = {
     render: (args) => <ScrollableImages/>
 };

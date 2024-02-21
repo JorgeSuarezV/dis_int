@@ -12,7 +12,7 @@ const meta: Meta<typeof InfoTrip> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof InfoTrip> = {
+export const Docs: StoryObj<typeof InfoTrip> = {
    render: (args) => 
    <div>
         <InfoTrip{...args} type={args.type ?? 'duration'} text={args.text ?? '5'}/>

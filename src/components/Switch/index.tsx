@@ -1,5 +1,5 @@
 import {cva} from 'class-variance-authority';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 const variants = cva(['w-[55px] h-[30px] rounded-full flex items-center cursor-pointer p-1'],
     {
@@ -18,7 +18,9 @@ export interface SwitchProps {
 
 const Switch = ({isEnabled}: SwitchProps) => {
     const [enabled, setEnabled] = useState(isEnabled);
-
+    useEffect(() => {
+        setEnabled(isEnabled);
+    }, [isEnabled]);
     return (
         <div className={variants({variant: enabled ? 'enabled' : 'disabled'})}
              onClick={() => setEnabled(!enabled)}>

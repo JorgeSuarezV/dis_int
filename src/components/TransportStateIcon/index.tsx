@@ -10,7 +10,7 @@ import {cva, VariantProps} from 'class-variance-authority'
 
 const stateVariant = cva(['w-[56px] h-[56px] rounded-full flex items-center justify-center'], {
     variants: {
-        variant: {
+        state: {
             detour: [
                 "bg-blue-300"
             ],
@@ -33,7 +33,7 @@ const stateVariant = cva(['w-[56px] h-[56px] rounded-full flex items-center just
 
     },
     defaultVariants: {
-        variant: 'offline',
+        state: 'offline',
     }
 })
 export type TransportState = "detour" | "delayed" | "strike" | "ok" | "transshipment" | "offline"
@@ -57,7 +57,7 @@ export const TransportStateIcon = ({state}: TransportStatesProps) => {
 
 
     return (
-        <div className={stateVariant({variant: state})}>
+        <div className={stateVariant({state: state})}>
             {svgRecord[state]}
         </div>
     )

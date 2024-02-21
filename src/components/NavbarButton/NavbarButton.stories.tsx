@@ -16,11 +16,9 @@ const meta: Meta<typeof NavbarButton> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof NavbarButton> = {
+export const Docs: StoryObj<typeof NavbarButton> = {
    render: (args) => 
-   <div className='w-[300px] h-[100px]'>
-        <NavbarButton {...args}
-            icon={<HomeSVG width={40} height={40} color={'theme.gray600'}/>}
-        />
+   <div>
+        <NavbarButton {...args} icon={<HomeSVG/>}/>
    </div>
 };

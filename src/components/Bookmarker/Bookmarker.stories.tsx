@@ -12,10 +12,9 @@ const meta: Meta<typeof Bookmarker> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof Bookmarker> = {
+export const Docs: StoryObj<typeof Bookmarker> = {
    render: (args) => 
    <div className='flex flex-col gap-4'>
-        <Bookmarker{...args} isBooked={true}/>
-        <Bookmarker{...args}/>
+      <Bookmarker {...args}/>
    </div>
 };

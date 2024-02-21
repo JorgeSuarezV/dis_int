@@ -12,7 +12,7 @@ const meta: Meta<typeof RouteComponent> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof RouteComponent> = {
+export const Docs: StoryObj<typeof RouteComponent> = {
     render: (args) => 
     <div className='w-[300px]'>
         <RouteComponent/>

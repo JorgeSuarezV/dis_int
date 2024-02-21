@@ -16,7 +16,7 @@ const meta: Meta<typeof Icon> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof Icon> = {
+export const Docs: StoryObj<typeof Icon> = {
     render: (args) => <Icon {...args} width={136} height={136} image={<img src={profile} alt=''/>}/>
 };
 

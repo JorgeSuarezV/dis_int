@@ -12,6 +12,6 @@ const meta: Meta<typeof ScheduleTrip> = {
 
 export default meta;
 
-export const scheduleTrip: StoryObj<typeof ScheduleTrip> = {
+export const Docs: StoryObj<typeof ScheduleTrip> = {
     render: (args) => <ScheduleTrip/>
 };

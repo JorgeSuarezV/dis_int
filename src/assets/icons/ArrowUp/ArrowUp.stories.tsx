@@ -12,6 +12,6 @@ const meta: Meta<typeof ArrowUp> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof ArrowUp> = {
+export const Docs: StoryObj<typeof ArrowUp> = {
    render: (args) => <ArrowUp/>
 };

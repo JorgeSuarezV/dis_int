@@ -20,7 +20,7 @@ export default function TransportSteps({steps, minutes, isOpen, setIsOpen}: Tran
             </div>
             {isOpen && <div className={"flex-col flex ml-9 w-full"}>
                 {steps.map((step, index) =>
-                    <p className={"text-neutral-600 text-xs font-medium font-Inter"} key={index}>
+                    <p className={"text-greyScale-700 text-xs font-medium font-Inter"} key={index}>
                         {step}
                     </p>)}
             </div>

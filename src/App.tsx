@@ -11,6 +11,9 @@ import RouteSteps from "./components/RouteSteps";
 import Divider from "./components/Divider";
 import OptionTrip from "./components/OptionTrip";
 import StartFinishStep from "./components/StartFinishStep";
+import TripSteps from "./components/TripSteps";
+
+
 
 
 function App() {
@@ -18,6 +21,44 @@ function App() {
     const [screen, setScreen] = React.useState(0)
     const [isOpen, setIsOpen] = React.useState(false)
 
+    const steps = [
+        {
+            type: "start",
+            title: "Tu ubicación",
+            time: "12:00"
+        },
+        {
+            type: "walking",
+            meters: 200,
+            minutes: 2
+        },
+        {
+            type: "transport",
+            cost: "10",
+            transport: "subway",
+            startSubheader: "Subte A",
+            startTime: new Date(),
+            startTitle: "Subte",
+            transportNumber: 32,
+            stepsOpen: isOpen,
+            stepsMinutes: 5,
+            setStepsOpen: setIsOpen,
+            stopSteps: ["Parada 1", "Parada 2", "Parada 3"],
+            finishTitle: "Parada 4",
+            finishTime: "12:15"
+        },
+        {
+            type: "walking",
+            meters: 200,
+            minutes: 5
+        },
+        {
+            type: "finish",
+            title: "Calle 2",
+            description: "Calle 2 de la esquina",
+            time: "12:20"
+        }
+    ]
 
     return (
         <PhoneFrame screen={screen} setScreen={setScreen}>
@@ -67,10 +108,9 @@ function App() {
                             <Divider/>
                         </div>
 
-                        <div className={"flex flex-col flex-grow"}>
-
+                        <div className={"flex flex-col flex-grow justify-start items-center"}>
+                            <TripSteps steps={steps}/>
                         </div>
-                        <StartFinishStep title={"s"}  time={"s"}/>
                     </div>
                     <div>
                         <OptionTrip arriveTime={"12:13"} duration={"26 min"}/>

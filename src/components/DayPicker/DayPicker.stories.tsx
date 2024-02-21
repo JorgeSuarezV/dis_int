@@ -12,10 +12,9 @@ const meta: Meta<typeof DayPicker> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof DayPicker> = {
+export const Docs: StoryObj<typeof DayPicker> = {
    render: (args) =>  
-   <div className='flex flex-col gap-4'>
-        <DayPicker{...args} text={'L'} isEnabled={true}/>
-        <DayPicker{...args} text={'L'} isEnabled={false}/>
+   <div>
+      <DayPicker {...args} text={args.text ?? 'L'}/>
    </div>
 };

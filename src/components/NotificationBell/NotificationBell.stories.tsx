@@ -12,6 +12,6 @@ const meta: Meta<typeof NotificationBell> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof NotificationBell> = {
+export const Docs: StoryObj<typeof NotificationBell> = {
    render: (args) => <NotificationBell/>
 };

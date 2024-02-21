@@ -12,9 +12,9 @@ const meta: Meta<typeof LineHeader> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof LineHeader> = {
+export const Docs: StoryObj<typeof LineHeader> = {
    render: (args) => 
    <div className='flex flex-col gap-4 w-[300px]'>
-        <LineHeader{...args} state={args.state ?? 'detour'} title={args.title ?? 'Titulo'}/>
+        <LineHeader{...args} state={args.state ?? 'detour'} title={args.title ?? 'Title'}/>
    </div>
 };

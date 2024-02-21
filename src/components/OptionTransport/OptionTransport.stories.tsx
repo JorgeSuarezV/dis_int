@@ -13,6 +13,6 @@ const meta: Meta<typeof OptionTransport> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof OptionTransport> = {
-   render: (args) => <OptionTransport{...args} icon= {<SmallBusSVG/>} text={args.text ?? 'Transporte'}/>
+export const Docs: StoryObj<typeof OptionTransport> = {
+   render: (args) => <OptionTransport{...args} icon= {<SmallBusSVG/>} text={args.text ?? 'Text'}/>
 };

@@ -12,6 +12,6 @@ const meta: Meta<typeof Switch> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof Switch> = {
-   render: (args) => <Switch isEnabled={args.isEnabled ?? false} /> 
+export const Docs: StoryObj<typeof Switch> = {
+   render: (args) => <Switch {...args}/> 
 };

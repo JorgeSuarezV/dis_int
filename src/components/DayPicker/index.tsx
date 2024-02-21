@@ -1,5 +1,5 @@
 import {cva} from 'class-variance-authority'
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 
 const variants = cva(['w-[36px] h-[36px] rounded-full flex items-center justify-center cursor-pointer'],
     {
@@ -19,6 +19,10 @@ interface DayPickerProps {
 
 const DayPicker = ({text, isEnabled}: DayPickerProps) => {
     const [enabled, setEnabled] = useState(isEnabled);
+
+    useEffect(() => {
+        setEnabled(isEnabled)
+    }, [isEnabled])
 
     return (
         <div className={variants({variant: enabled ? 'enabled' : 'disabled'})}

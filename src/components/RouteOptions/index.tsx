@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {cva} from 'class-variance-authority';
 import DoneSVG from '../../assets/icons/DoneSVG';
 import {theme} from '../../assets/theme';
@@ -21,7 +21,9 @@ interface RouteOptionsProps {
 
 const RouteOptions = ({isEnabled}: RouteOptionsProps) => {
     const [enabled, setEnabled] = useState(isEnabled);
-
+    useEffect(() => {
+        setEnabled(isEnabled);
+    }, [isEnabled]);
     return (
         <div className="flex items-center w-340 justify-between cursor-pointer"
              onClick={() => setEnabled(!enabled)}>

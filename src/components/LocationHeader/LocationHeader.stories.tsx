@@ -12,9 +12,9 @@ const meta: Meta<typeof LocationHeader> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof LocationHeader> = {
+export const Docs: StoryObj<typeof LocationHeader> = {
    render: (args) => 
    <div className='w-[300px]'>
-        <LocationHeader{...args} title={args.title ?? 'Titulo'}/>
+        <LocationHeader{...args} title={args.title ?? 'Title'}/>
    </div>
 };

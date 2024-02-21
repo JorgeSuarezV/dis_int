@@ -1,22 +1,22 @@
-// Transport.stories.tsx
-import * as React from "react";
 import Transport from "../Transport";
+import { StoryObj, Meta } from '@storybook/react';
 
 
-export default {
+const meta = {
     title: "Transport",
     component: Transport,
+    parameters: {
+        layout: 'centered',
+    },
+    tags: ['autodocs']
 }
 
-const Template = (args) =>
-    <div className={"w-[320px] bg-black h-[150px] flex justify-center items-center"}>
-        <Transport {...args} />;
-    </div>
+export default meta;
 
-export const Train = Template.bind({});
-Train.args = {
-    transport: "train",
-    title: "Train Title",
-    description: "Train Description",
-    state: "ok",
-};
+export const Docs = {   
+    render: (args) => (
+        <div className={"w-[300px] bg-white h-[90px] flex justify-center items-center"}>
+            <Transport {...args} transport={args.transport ?? 'train'} title={args.title ?? 'Title'} description={args.description ?? 'Description'} state={args.state ?? 'ok'}/>
+        </div>
+    ),
+}

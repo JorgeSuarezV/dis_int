@@ -1,37 +1,21 @@
-import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 import SearchBar from '../SearchBar';
-import SearchSVG from "../../assets/icons/SearchSVG";
-import MicrophoneSVG from "../../assets/icons/MicrophoneSVG";
-import CloseSVG from "../../assets/icons/CloseSVG";
 
-export default {
+const meta = {
     title: 'SearchBar',
     component: SearchBar,
+    parameters: {
+        layout: 'centered',
+    },
+    tags: ['autodocs']
 };
 
-const Template = (args) =>
-    <div className={"w-[300px] bg-white h-[90px] flex justify-center items-center"}>
-        <SearchBar {...args} />
-    </div>
+export default meta;
 
-export const Default = Template.bind({});
-Default.args = {
-    IconLeft: SearchSVG,
-    IconRight: MicrophoneSVG,
-    placeholder: 'Search...',
-    variant: 'default',
-    value: '',
-};
-
-export const FlatVariant = Template.bind({});
-FlatVariant.args = {
-    ...Default.args,
-    variant: 'flat',
-};
-
-export const WithValue = Template.bind({});
-WithValue.args = {
-    ...Default.args,
-    value: 'Hello World',
-    IconRight: CloseSVG,
-};
+export const Docs = {
+    render: (args) => (
+        <div className={"w-[300px] bg-white h-[90px] flex justify-center items-center"}>
+            <SearchBar {...args} />
+        </div>
+    ),
+}

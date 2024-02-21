@@ -1,40 +1,20 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import TransportStateIcon, {TransportState} from '../TransportStateIcon';
+import { Meta, StoryObj } from '@storybook/react';
+import TransportStateIcon from '../TransportStateIcon';
 
-export default {
+const meta: Meta<typeof TransportStateIcon> = {
     title: 'TransportStateIcon',
     component: TransportStateIcon,
-} as ComponentMeta<typeof TransportStateIcon>;
-
-const Template: ComponentStory<typeof TransportStateIcon> = (args) => <TransportStateIcon {...args} />
-
-export const Detour = Template.bind({});
-Detour.args = {
-    state: 'detour' as TransportState,
+    parameters: {
+        layout: 'centered',
+    },
+    tags: ['autodocs']
 };
 
-export const Delayed = Template.bind({});
-Delayed.args = {
-    state: 'delayed' as TransportState,
-};
+export default meta;
 
-export const Strike = Template.bind({});
-Strike.args = {
-    state: 'strike' as TransportState,
-};
-
-export const Ok = Template.bind({});
-Ok.args = {
-    state: 'ok' as TransportState,
-};
-
-export const Transshipment = Template.bind({});
-Transshipment.args = {
-    state: 'transshipment' as TransportState,
-};
-
-export const Offline = Template.bind({});
-Offline.args = {
-    state: 'offline' as TransportState,
+export const Docs: StoryObj<typeof TransportStateIcon> = {
+    render: (args) => 
+    <div className='flex flex-col gap-4'>
+        <TransportStateIcon {...args} state={args.state ?? 'offline'}/>
+    </div>
 };

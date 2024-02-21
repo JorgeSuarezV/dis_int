@@ -12,7 +12,7 @@ const meta: Meta<typeof Navbar> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof Navbar> = {
+export const Docs: StoryObj<typeof Navbar> = {
    render: (args) => 
    <div className='w-[300px] h-[100px]'>
       <Navbar/>

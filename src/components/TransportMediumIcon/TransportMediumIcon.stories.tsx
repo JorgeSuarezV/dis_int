@@ -12,6 +12,6 @@ const meta: Meta<typeof TransportMediumIcon> = {
 
 export default meta;
 
-export const Search: StoryObj<typeof TransportMediumIcon> = {
-   render: (args) => <TransportMediumIcon transport={args.transport ?? 'train'} /> 
+export const Docs: StoryObj<typeof TransportMediumIcon> = {
+   render: (args) => <TransportMediumIcon{...args} transport={args.transport ?? 'train'}/> 
 };

@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react';
+import { Story, Meta, StoryObj } from '@storybook/react';
 import StarSVG from '../../assets/icons/StarSVG';
 import Button, { ButtonProps } from '.';
 
@@ -11,4 +11,9 @@ export default {
   tags: ['autodocs']
 } as Meta;
 
-export const Template: Story<ButtonProps> = (args) => <Button {...args}   variant={args.variant ?? 'fulfilled'} children={args.children ?? 'Fulfilled'} iconLeft={<StarSVG />} iconRight={<StarSVG />} />;
+export const Docs: StoryObj<typeof Button> = {
+  render: (args) =>
+    <div>
+      <Button {...args} iconLeft={<StarSVG />} iconRight={<StarSVG />} >Button</Button>
+    </div>
+}

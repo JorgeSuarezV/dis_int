@@ -1,4 +1,4 @@
-import React, {ReactNode, useMemo} from 'react'
+import React, {ReactNode, useEffect, useMemo} from 'react'
 import ScheduleSVG from '../../assets/icons/ScheduleSVG';
 import {theme} from '../../assets/theme';
 import DistanceSVG from '../../assets/icons/DistanceSVG';
@@ -31,8 +31,8 @@ const InfoTrip = ({type, text,}: InfoTripProps) => {
                 info: 'Gastos',
             },
         }
-    }, [])
-
+    }, [text])
+    
     return (
         <div className="flex items-center gap-1.5">
             {infoRecord[type].icon}

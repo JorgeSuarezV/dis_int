@@ -1,34 +1,20 @@
-import React from 'react';
-import {ComponentMeta, ComponentStory} from '@storybook/react';
-import TextInput, {inputState} from '../TextInput';
+import { Meta, StoryObj} from '@storybook/react';
+import TextInput from '../TextInput';
 
-export default {
+const meta: Meta<typeof TextInput> = {
     title: 'TextInput',
     component: TextInput,
-} as ComponentMeta<typeof TextInput>;
-
-const Template: ComponentStory<typeof TextInput> = (args) =>
-    <div className={"w-[300px] bg-white h-[150px] flex justify-center items-center"}>
-        <TextInput {...args} />
-    </div>
-
-export const Default = Template.bind({});
-Default.args = {
-    inputState: 'default' as inputState,
-    label: 'Default Input',
-    helperText: 'This is a helper text',
+    parameters: {
+        layout: 'centered',
+    },
+    tags: ['autodocs']
 };
 
-export const Error = Template.bind({});
-Error.args = {
-    ...Default.args,
-    inputState: 'error' as inputState,
-    helperText: 'This is a helper text',
-};
+export default meta;
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-    ...Default.args,
-    inputState: 'disabled' as inputState,
-    helperText: 'This is a helper text',
+export const Docs: StoryObj<typeof TextInput> = {
+    render: (args) =>
+        <div className={"w-[300px] bg-white h-[150px] flex justify-center items-center"}>
+            <TextInput {...args} inputState={args.inputState ?? 'default'} label={args.label ?? 'Label'} helperText={args.helperText ?? 'Helper Text'}/>
+        </div>
 };
